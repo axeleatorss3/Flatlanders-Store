@@ -147,67 +147,142 @@
             </div>
         </div>
         <!--seccion de lo mas vendido -->
-        <div class="section text-center">
-            <h2 class="title">Los Articulos mas Vendidos</h2>
-            <div class="row ml-5 mr-5">
-                <div class="col-md-3">
-                    <div class="card bmd-card-raised">
-                        <div class="row-md-4">
-                            <img src="images/gems/gem-01.gif" alt="" class="card-header-image mt-3 img-thumbnail">
-                            <h3 class="card-title text-left ml-4 mr-auto">Azurite</h3>
-                            <div class="row-cols-2 ">
-                                <h3 class="card-text text-lg-left ml-lg-4">
-                                    $???
-                                </h3>
-                                <p class="card-body text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident eius sequi totam maxime soluta.</p>
-                            </div>
-                            
-                        </div>
-                    </div>
+        <div id="carousel-example-multi" class="carousel slide carousel-multi-item v-2" data-ride="carousel">
+            <div class="section text-center">
+                <h2 class="title">Los Articulos mas Vendidos</h2>
+                <!--Controls-->
+                <div class="controls-top">
+                    <a class="btn-floating" href="#multi-item-example" data-slide="prev">
+                        <-<i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a class="btn-floating" href="#multi-item-example" data-slide="next">-><i
+                            class="fas fa-chevron-right"></i></a>
                 </div>
-                <div class="col-md-3">
-                    <div class="card bmd-card-raised">
-                        <div class="row-md-4">
-                            <img src="images/gems/gem-04.gif" alt="" class="card-header-image mt-3 img-thumbnail">
-                            <h3 class="card-title text-left ml-4 mr-auto">Bloodstone</h3>
-                            <div class="row-cols-2">
-                                <h3 class="card-text text-lg-left ml-lg-4 ">
-                                    $???
-                                </h3>
-                                <p class="card-body text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident eius sequi totam maxime soluta.</p>
+                <!--/.Controls-->
+                <ol class="carousel-indicators">
+
+                    <li class="btn-primary" data-target="#carousel-example-multi" data-slide-to="0" class="active"></li>
+                    <li class="btn-primary" data-target="#carousel-example-multi" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner v-2" role="listbox">
+
+                    <div class="row ml-5 mr-5 ">
+                        <div class="carousel-item active ">
+                            <div class="row wrapper">
+                                <div class="col-md-4">
+                                    <div class="card bmd-card-raised">
+                                        <div class="row-md-4">
+                                            <img src="images/gems/gem-01.gif" alt=""
+                                                class="card-header-image mt-3 img-thumbnail">
+                                            <h3 class="card-title text-left ml-4 mr-auto">Azurite</h3>
+                                            <div class="row-cols-2 ">
+                                                <h3 class="card-text text-lg-left ml-lg-4">
+                                                    $???
+                                                </h3>
+                                                <p class="card-body text-justify">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing
+                                                    elit. Provident eius sequi totam maxime soluta.</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="crousel-item">
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card bmd-card-raised">
+                                        <div class="row-md-4">
+                                            <img src="images/gems/gem-04.gif" alt=""
+                                                class="card-header-image mt-3 img-thumbnail">
+                                            <h3 class="card-title text-left ml-4 mr-auto">Bloodstone</h3>
+                                            <div class="row-cols-2">
+                                                <h3 class="card-text text-lg-left ml-lg-4 ">
+                                                    $???
+                                                </h3>
+                                                <p class="card-body text-justify">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing
+                                                    elit. Provident eius sequi totam maxime soluta.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card bmd-card-raised">
+                                        <div class="row-md-4">
+                                            <img src="images/gems/gem-07.gif" alt=""
+                                                class="card-header-image mt-3 img-thumbnail">
+                                            <h3 class="card-title text-left ml-4 mr-auto">Zircon</h3>
+                                            <div class="row-cols-2 ">
+                                                <h3 class="card-text text-lg-left ml-lg-4">
+                                                    $???
+                                                </h3>
+                                                <p class="card-body text-justify">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing
+                                                    elit. Provident eius sequi totam maxime soluta.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card bmd-card-raised">
-                        <div class="row-md-4">
-                            <img src="images/gems/gem-07.gif" alt="" class="card-header-image mt-3 img-thumbnail">
-                            <h3 class="card-title text-left ml-4 mr-auto">Zircon</h3>
-                            <div class="row-cols-2 ">
-                                <h3 class="card-text text-lg-left ml-lg-4">
-                                    $???
-                                </h3>
-                                <p class="card-body text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident eius sequi totam maxime soluta.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 tea">
-                    <div class="card bmd-card-raised">
-                        <div class="row-md-4">
-                            <img src="images/gems/gem-10.gif" alt="" class="card-header-image mt-3 img-thumbnail">
-                            <h3 class="card-title text-left ml-4 mr-auto">Zircon Especial</h3>
-                            <div class="row-cols-2">
-                                <div class="row ml-lg-auto">
-                                    <h3 class="card-text ml-4">
-                                        $???
-                                    </h3>
-                                    <h3 class="card-text ml-4 text-success">
-                                        20% OFF
-                                    </h3>
-                                </div> 
-                                <p class="card-body text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident eius sequi totam maxime soluta.</p>
+
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="card bmd-card-raised">
+                                        <div class="row-md-4">
+                                            <img src="images/gems/gem-10.gif" alt=""
+                                                class="card-header-image mt-3 img-thumbnail">
+                                            <h3 class="card-title text-left ml-4 mr-auto">Zircon Especial</h3>
+                                            <div class="row-cols-2">
+
+                                                <h3 class="card-text text-lg-left ml-lg-4">
+                                                    $???
+                                                </h3>
+
+                                                <p class="card-body text-justify">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing
+                                                    elit. Provident eius sequi totam maxime soluta.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card bmd-card-raised">
+                                        <div class="row-md-4">
+                                            <img src="images/gems/gem-04.gif" alt=""
+                                                class="card-header-image mt-3 img-thumbnail">
+                                            <h3 class="card-title text-left ml-4 mr-auto">Zircon</h3>
+                                            <div class="row-cols-2 ">
+                                                <h3 class="card-text text-lg-left ml-lg-4">
+                                                    $???
+                                                </h3>
+                                                <p class="card-body text-justify">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing
+                                                    elit. Provident eius sequi totam maxime soluta.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card bmd-card-raised">
+                                        <div class="row-md-4">
+                                            <img src="images/gems/gem-09.gif" alt=""
+                                                class="card-header-image mt-3 img-thumbnail">
+                                            <h3 class="card-title text-left ml-4 mr-auto">Zircon</h3>
+                                            <div class="row-cols-2 ">
+                                                <h3 class="card-text text-lg-left ml-lg-4">
+                                                    $???
+                                                </h3>
+                                                <p class="card-body text-justify">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing
+                                                    elit. Provident eius sequi totam maxime soluta.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
