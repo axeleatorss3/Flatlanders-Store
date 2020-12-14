@@ -3,10 +3,17 @@
 
     app.controller('Products', ['$scope', '$state', '$http', function ($scope, $state, $http) {
         let store = this;
+
         store.products = []
-        $http.get("./dummy/products.json").then(function (data) {
+        store.reviews = []
+        store.sumStars = 0
+        store.avgStars = 0
+
+        $http.get("./dummy/products.json").then(function(data) {
             console.info(data)
-            store.products = data
+            store.products = data.data.gems
+            //store.sumStars = store.products.reviews.map(item => item.stars).reduce((prev, next) => prev + next)
+            //store.avgStars = store.sumStars / store.products.length
         })
     }])
 })();

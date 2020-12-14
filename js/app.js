@@ -6,6 +6,7 @@
         'landing',
         'navbar',
         'footer',
+        'app',
         'products'
     ]);
 
