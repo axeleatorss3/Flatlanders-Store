@@ -15,5 +15,12 @@
             //store.sumStars = store.products.reviews.map(item => item.stars).reduce((prev, next) => prev + next)
             //store.avgStars = store.sumStars / store.products.length
         })
+
+        store.go = function(_id){
+            console.log(_id)
+            $state.go('app.product', {
+                _id: _id
+            })
+        }
     }])
 })();
