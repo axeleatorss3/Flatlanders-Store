@@ -9,7 +9,12 @@
         'app',
         'products',
         'product',
-        'filters'
+        'filters',
+        'gallery',
+        'panels',
+        'specstab',
+        'reviewtab',
+        'descriptab'
     ]);
 
     app.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {

@@ -1,29 +1,9 @@
 <section class="mb-5" ng-controller="Product as prod">
     <div class="row">
         <div class="col-md-6 mb-4 md-md-0">
-            <div class="row product-gallery mx-1">
-                <div class="col-12 mb-0">
-                    <figure class="view overlay rounded z-depth-1 main-img">
-                        <a href="" data-size="710x823">
-                            <img ng-src="{{prod.detail.images[0]}}" class="img-fluid z-depth-1 img-raised rounded"
-                                alt="">
-
-                        </a>
-                    </figure>
-                </div>
-                <div class="col-12">
-                    <div class="row">
-                        <div class="col-3" style="display: -webkit-box;">
-                            <div class="view overlay rounded z-depth-1 gallery-item"
-                                ng-repeat="img in prod.detail.images track by $index">
-                                <img class="img-fluid img-raised rounded" ng-src="{{img}}" alt="">
-                                <div class="mask rgba-white-slight"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <product-gallery></product-gallery>
         </div>
+       
         <div class="col-md-6">
             <h3>{{prod.detail.name}}</h3>
             <p class="mb-2 text-muted text-uppercase small">Gems</p>
@@ -125,78 +105,10 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-                <ul class="nav nav-pills nav-pills-rose nav-pill-icons">
-                    <li class="nav-item" ng-class="{active : prod.isSet(0)}">
-                        <a href="" class="nav-link" data-toggle="tab" aria-selected="true"
-                            ng-click="prod.setCurrent(0)">
-                            <i class="material-icons">list</i>
-                            Specs
-                        </a>
-                    </li>
-                    <li class="nav-item" ng-class="{active : prod.isSet(1)}">
-                        <a href="" class="nav-link" data-toggle="tab" aria-selected="true"
-                            ng-click="prod.setCurrent(1)">
-                            <i class="material-icons">rule</i>
-                            Reviews
-                        </a>
-                    </li>
-                    <li class="nav-item" ng-class="{active : prod.isSet(2)}">
-                        <a href="" class="nav-link" data-toggle="tab" aria-selected="true"
-                            ng-click="prod.setCurrent(2)">
-                            <i class="material-icons">dashboard</i>
-                            Description
-                        </a>
-                    </li>
-                </ul>
-
-                <div class="tab-content tab-space">
-                    <div class="tab-pane" ng-show="prod.isSet(0)">
-                        Faces: {{prod.detail.specs.faces}}
-                        Color: {{prod.detail.specs.color}}
-                        Rarity: {{prod.detail.specs.rarity}}
-                        Shine: {{prod.detail.specs.shine}}
-                    </div>
-                    <div class="tab-pane" ng-show="prod.isSet(1)">
-                        <ul class="reviews">
-                            <li ng-repeat="reviews in prod.detail.reviews">
-                                <blockquote>
-                                    <ul class="list-inline">
-                                        <li class="list-inline-item m-0" ng-repeat="n in [] | range:review.stars">
-                                            <i class="fa fa-star text-rose"></i>
-                                        </li>
-                                    </ul>
-                                    <p>{{review.body}}</p>
-                                    <cite class="cleaerfix">{{review.author}} on {{review.createdOn | date}}</cite>
-                                </blockquote>
-                            </li>
-                        </ul>
-                        <h5 class="mt-4">Add a Review</h5>
-                        <p>Your email will not be published</p>
-                        <div class="form-group bmd-form-group">
-                            <label for="your-review" class="bmd-label-floating">Add your review</label>
-                            <textarea type="text" class="form-control" id="your-review" rows="4"></textarea>
-                            <span class="bmd-help">Your review will be awesome</span>
-                        </div>
-                        <div class="form-group bmd-form-group">
-                            <label for="name-review" class="bmd-label-floating">Add your name</label>
-                            <input type="text" class="form-control" id="your-review" />
-                            <span class="bmd-help">Let us know your name</span>
-                        </div>
-                        <div class="form-group bmd-form-group">
-                            <label for="email-review" class="bmd-label-floating">Email</label>
-                            <input type="email " class="form-control" id="email-review" rows="4" />
-                            <span class="bmd-help">Let us know your email</span>
-                        </div>
-                        <div class="text-right pb-2">
-                            <button type="button" class="btn btn-rose">Add Review</button>
-                        </div>
-                    </div>
-                    <div class="tab-pane" ng-show="prod.isSet(2)">
-                        <h3>{{prod.detail.name}}</h3>
-                        <p><span class="mr-1"><strong>{{prod.detail.price | currency}}</strong></span></p>
-                        <p class="pt-1">{{prod.detail.long_description}}</p>
-                    </div>
-                </div>
+               <product-panels></product-panels>
+                   <specs-tab></specs-tab>
+                   <review-tab></review-tab>
+                   <descrip-tab></descrip-tab>
             </div>
         </div>
     </div>
